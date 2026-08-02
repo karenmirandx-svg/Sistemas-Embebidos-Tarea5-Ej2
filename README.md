@@ -6,9 +6,9 @@ Descripción del Proyecto
 El código demuestra la ejecución concurrente de múltiples tareas con diferentes niveles de prioridad, evitando el bloqueo del sistema (a diferencia de un loop secuencial tradicional) mediante la correcta gestión de temporización.
 
 Tareas Implementadas:
-- Task_LED (Prioridad 3 - Alta)**: Controla el parpadeo de un LED en el GPIO 2 con una frecuencia alta (500ms).
-- Task_Sensor (Prioridad 2 - Media)**: Simula la lectura periódica de un sensor mediante un temporizador, enviando el valor al monitor serial cada 1000ms.
-- Task_Reporte (Prioridad 1 - Baja)**: Envía periódicamente (cada 2000ms) un reporte del estado del sistema por el puerto serial.
+- Task_LED (Prioridad 3 - Alta): Controla el parpadeo de un LED en el GPIO 2 con una frecuencia alta (500ms).
+- Task_Sensor (Prioridad 2 - Media): Simula la lectura periódica de un sensor mediante un temporizador, enviando el valor al monitor serial cada 1000ms.
+- Task_Reporte (Prioridad 1 - Baja): Envía periódicamente (cada 2000ms) un reporte del estado del sistema por el puerto serial.
 
 Se utiliza la función `vTaskDelay()` en lugar de retardos bloqueantes convencionales para ceder el control del procesador (scheduler) y permitir el paralelismo real de las funciones.
 
